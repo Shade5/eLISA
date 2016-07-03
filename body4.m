@@ -4,6 +4,11 @@
      
      
      
+    
+     
+     
+     
+     
 clear all
 clc
 close all
@@ -25,11 +30,11 @@ vi=1.5;
 
 % Initial Conditions
 xa0 = 1*AU;
-xav0 = -vi*10^4;
+xav0 = -0.7*vi*10^4;
 ya0 = 1*AU;
 yav0 = vi*10^4;
 za0 = 1*AU;
-zav0 = -vi*10^4;
+zav0 = -0.7*vi*10^4;
 
 xb0 = 1*AU;
 xbv0 = vi*10^4;
@@ -46,17 +51,17 @@ zc0 = -1*AU;
 zcv0 = -vi*10^4;
 
 xd0 = -1*AU;
-xdv0 = vi*10^4;
+xdv0 = 0.7*vi*10^4;
 yd0 = -1*AU;
 ydv0 = -vi*10^4;
 zd0 = -1*AU;
-zdv0 = vi*10^4;
+zdv0 = 0.7*vi*10^4;
 
 %/////////////////
 
 E=zeros(50000,1);
 
-for t = 1:500
+for t = 1:390
     
     t 
     %step1
@@ -394,8 +399,4 @@ end
 
 %figure();
     % plot(E);
-     
-     
-     
-     
      
