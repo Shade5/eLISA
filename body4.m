@@ -1,14 +1,4 @@
-
-     
-     
-     
-     
-     
-    
-     
-     
-     
-     
+   
 clear all
 clc
 close all
@@ -25,43 +15,43 @@ SM = 1.98855*10^30;
 
 AU =1.49597871 * 10^11;
 
-vi=1.5;
+vi=1.3;
 
 
 % Initial Conditions
 xa0 = 1*AU;
-xav0 = -0.7*vi*10^4;
+xav0 = -0.8*vi*10^4;
 ya0 = 1*AU;
 yav0 = vi*10^4;
 za0 = 1*AU;
-zav0 = -0.7*vi*10^4;
+zav0 = 0.8*vi*10^4;
 
 xb0 = 1*AU;
-xbv0 = vi*10^4;
+xbv0 = 1.2*vi*10^4;
 yb0 = -1*AU;
-ybv0 = vi*10^4;
+ybv0 = 1.2*vi*10^4;
 zb0 = 1*AU;
 zbv0 = vi*10^4;
 
 xc0 = -1*AU;
-xcv0 = -vi*10^4;
+xcv0 = -1.2*vi*10^4;
 yc0 = 1*AU;
-ycv0 = -vi*10^4;
+ycv0 = -1.2*vi*10^4;
 zc0 = -1*AU;
 zcv0 = -vi*10^4;
 
 xd0 = -1*AU;
-xdv0 = 0.7*vi*10^4;
+xdv0 = 0.8*vi*10^4;
 yd0 = -1*AU;
 ydv0 = -vi*10^4;
 zd0 = -1*AU;
-zdv0 = 0.7*vi*10^4;
+zdv0 = -0.8*vi*10^4;
 
 %/////////////////
 
 E=zeros(50000,1);
 
-for t = 1:390
+for t = 1:500
     
     t 
     %step1
