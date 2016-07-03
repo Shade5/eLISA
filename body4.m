@@ -1,5 +1,9 @@
-% 3D  four body simulation
 
+     
+     
+     
+     
+     
 clear all
 clc
 close all
@@ -8,7 +12,7 @@ hold on
 
 %axis([0 500000 0 10e+39])
 
-h=60*60*240;
+h=60*60*24;
 
 G= 6.67408 * 10^-11;
 
@@ -16,56 +20,43 @@ SM = 1.98855*10^30;
 
 AU =1.49597871 * 10^11;
 
-
-xa0 = 3.3030197*AU;
-xav0 = 1.58743376*4.7437*10^3;
-ya0 = -0.822771837*AU;
-yav0 = 1.47221479*4.7437*10^3;
-za0 = -0.822771837*AU;
-zav0 = -1.47221479*4.7437*10^3;
-
-xb0 = -3.3030197*AU;
-xbv0 = 1.58743376*4.7437*10^3;
-yb0 = 0.822771837*AU;
-ybv0 = 1.47221479*4.7437*10^3;
-zb0 = 0.822771837*AU;
-zbv0 = 1.47221479*4.7437*10^3;
-
-xc0 = 0;
-xcv0 = -3.174867535*4.7437*10^3;
-yc0 = 0;
-ycv0 = -2.94442961*4.7437*10^3;
-zc0 = 0;
-zcv0 = -2.94442961*4.7437*10^3;
-
-xd0 = 6*AU;
-xdv0 = 1000;
-yd0 = 6*AU;
-ydv0 = 0;
-zd0 = 6*AU;
-zdv0 = 0;
+vi=1.5;
 
 
+% Initial Conditions
+xa0 = 1*AU;
+xav0 = -vi*10^4;
+ya0 = 1*AU;
+yav0 = vi*10^4;
+za0 = 1*AU;
+zav0 = -vi*10^4;
 
-%{
-xa0 = AU;
-xav0 = 0;
-ya0 = 0;
-yav0 = sqrt(G*SM*3/(AU*2));
+xb0 = 1*AU;
+xbv0 = vi*10^4;
+yb0 = -1*AU;
+ybv0 = vi*10^4;
+zb0 = 1*AU;
+zbv0 = vi*10^4;
 
-xb0 = -AU;
-xbv0 = 0;
-yb0 = 0;
-ybv0 = -sqrt(G*SM*3/(AU*2));
+xc0 = -1*AU;
+xcv0 = -vi*10^4;
+yc0 = 1*AU;
+ycv0 = -vi*10^4;
+zc0 = -1*AU;
+zcv0 = -vi*10^4;
 
-xc0 = 0;
-xcv0 = 0;
-yc0 = 0;
-ycv0 = 0;
-%}
+xd0 = -1*AU;
+xdv0 = vi*10^4;
+yd0 = -1*AU;
+ydv0 = -vi*10^4;
+zd0 = -1*AU;
+zdv0 = vi*10^4;
+
+%/////////////////
+
 E=zeros(50000,1);
 
-for t = 1:300
+for t = 1:500
     
     t 
     %step1
@@ -369,6 +360,10 @@ for t = 1:300
      xc0= xc1;
      xcv0=xcv1;
      
+     xd0= xd1;
+     xdv0=xdv1;
+          
+     
      ya0= ya1;
      yav0=yav1;
      
@@ -378,11 +373,27 @@ for t = 1:300
      yc0= yc1;
      ycv0=ycv1;
      
+     yd0= yd1;
+     ydv0=ydv1;
+     
+     
+     za0= za1;
+     zav0=zav1;
+     
+     zb0= zb1;
+     zbv0=zbv1;
+     
+     zc0= zc1;
+     zcv0=zcv1;
+     
+     zd0= zd1;
+     zdv0=zdv1;
+     
      
 end
 
-figure();
-     plot(E);
+%figure();
+    % plot(E);
      
      
      
