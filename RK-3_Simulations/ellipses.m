@@ -11,22 +11,22 @@ L=10^9;
 
 
 
-xe=[152.10*10^(9),0,0];
-ve=[0,29.29*1000,0];
-xs=[0,0,0];
-vs=[0,0,0];
-
-[Ea,Eva,S,Sv]= earsun(xe,ve,xs,vs);
-
-
-
-
 xe=[152.10*10^(9),0,L/2];
 ve=[0,29.29*1000,0];
 xs=[0,0,0];
 vs=[0,0,0];
 
 [E1,Ev1,S,Sv]= earsun(xe,ve,xs,vs);
+
+pha=100;
+
+
+xe=[E1(pha,1),E1(pha,2),0];
+ve=[Ev1(pha,1),Ev1(pha,2),Ev1(pha,3)];
+xs=[0,0,0];
+vs=[0,0,0];
+
+[Ea,Eva,S,Sv]= earsun(xe,ve,xs,vs);
 
 
 
@@ -73,6 +73,7 @@ for i=1:10:size(E1,1)
             delete(h1);
             delete(h2);
             delete(h3);
+            delete(e);
            
             
     
