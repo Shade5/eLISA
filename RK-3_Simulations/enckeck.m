@@ -1,4 +1,4 @@
-function encheck(E1,Ev1,S,Sv)
+function enckeck(E1,Ev1,S,Sv)
 
     G=6.67408*10^(-11);
     
