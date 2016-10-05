@@ -2,7 +2,7 @@ function rk = g(t,y)
     G=6.67408*10^(-11);
     
     GM=G*1.98855*10^30;
-    Gm=G*5.97219*10^24;
+    Gm=G*1000;
 
     r=sqrt( (y(1)-y(7))^2+(y(2)-y(8))^2+(y(3)-y(9))^2);
     %rk=[ex;ey;ez;evx;evy;evz;sx;sy;sz;svx;svy;svz]

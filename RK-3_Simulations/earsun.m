@@ -13,7 +13,7 @@ function [E,Ev,B,Bv] = earsun(xe,ve,xs,vs)
     initial=[xe(1),xe(2),xe(3),ve(1),ve(2),ve(3),xs(1),xs(2),xs(3),vs(1),vs(2),vs(3)];
     
 
-        [t,y]=ode45(@g,timerange,initial);
+        [t,y]=ode23(@g,timerange,initial);
 
         E=y(:,1:3);
         Ev=y(:,4:6);
