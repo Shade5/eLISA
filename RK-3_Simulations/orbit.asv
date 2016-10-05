@@ -15,7 +15,7 @@ ve=[0,29.29*1000,0];
 
 
 
-t=0:h*2*pi:2;
+t=0:h*2*pi:1;
 
 E1(:,1)=ve(1)*sin(Ome*t)/Ome -(3*xe(1) + 2*ve(2)/Ome)*cos(Ome*t)+2*(2*xe(1)+ve(2)/Ome);
 E1(:,2)=(6*xe(1)+4*ve(2)/Ome)*sin(Ome*t) +2*ve(1)*cos(Ome*t)/Ome -3*t*(2*Ome*xe(1)+ve(2))+(xe(2)-2*ve(1)/Ome);
@@ -25,15 +25,9 @@ Ev1(:,1)=findvel(E1(:,1),ve(1),60*6*24);
 Ev1(:,2)=findvel(E1(:,2),ve(2),60*6*24);    
 Ev1(:,3)=findvel(E1(:,3),ve(3),60*6*24);
 
-xlabel('x');
-ylabel('y');
-for i=1:size(E1,1)
+    
 
-plot3(E1(i,1),E1(i,2),E1(i,3),'ro');
-
-pause(0.0001)
-
-end
+plot3(E1(:,1),E1(:,2),E1(:,3),'r');
 
 
 
