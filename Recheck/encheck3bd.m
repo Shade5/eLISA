@@ -19,8 +19,8 @@ function encheck3bd(E,Ev,S,Sv,A,Av)
     
     PE = -G*M*m*rse.^(-1) -G*M*a*ras.^(-1) -G*a*m*rae.^(-1);
     
-    plot(KE,'r');
-    plot(PE,'g');
+   % plot(KE,'r');
+   % plot(PE,'g');
     plot(KE+PE,'b');
 
 
