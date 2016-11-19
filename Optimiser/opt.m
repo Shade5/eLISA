@@ -8,10 +8,12 @@ xe=[1.0167,0,0];
 ve=[0,6.1745,0];
 xs=[0,0,0];
 vs=[0,0,0];
-xa=[0.9611,-0.3295,L/2];
-va=[2.0364,5.8381,0];
+xa=[0.9600,-0.3295,L/2];
+va=[2.0363,5.8903,0];
 
-[E1,Ev1,S,Sv,A1,Av1]= earsunsat(xe,ve,xs,vs,xa,va);
+
+
+load sat1
 
 	xa=[A1(pha(1),1)*cos(2*pi/3)-A1(pha(1),2)*sin(2*pi/3),A1(pha(1),2)*cos(2*pi/3)+A1(pha(1),1)*sin(2*pi/3),A1(pha(1),3)];
 	va=[Av1(pha(1),1)*cos(2*pi/3)-Av1(pha(1),2)*sin(2*pi/3),Av1(pha(1),2)*cos(2*pi/3)+Av1(pha(1),1)*sin(2*pi/3),Av1(pha(1),3)];

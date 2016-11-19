@@ -7,7 +7,7 @@ function encheck3bd(E,Ev,S,Sv,A,Av)
     
     M=1;
     m=3.0025*10^(-06);
-    a=3.6953*10^(-08);
+    a=0*3.6953*10^(-08);
     
     KE = 0.5*(m*(Ev(:,1).^2+Ev(:,2).^2+Ev(:,3).^2)...
              +M*(Sv(:,1).^2+Sv(:,2).^2+Sv(:,3).^2)...
@@ -21,6 +21,8 @@ function encheck3bd(E,Ev,S,Sv,A,Av)
     
    % plot(KE,'r');
    % plot(PE,'g');
+   save KE2e KE
+   save PE2e PE
     plot(KE+PE,'b');
 
 

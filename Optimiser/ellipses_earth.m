@@ -2,11 +2,9 @@ clear all
 close all
 clc
 
-
-
 hold on;
 
-axis([-1.3369 1.3369 -1.3369 1.3369 -0.0134 0.0134])
+axis([-1.3369 1.3369 -1.3369 1.3369 -0.033369 0.033369])
 L=0.0067;
 
 
@@ -15,15 +13,15 @@ xe=[1.0167,0,0];
 ve=[0,6.1745,0];
 xs=[0,0,0];
 vs=[0,0,0];
-xa=[0.9611,-0.3295,L/2];
-va=[2.0364,5.8381,0];
+xa=[0.9600,-0.3295,L/2];
+va=[2.0363,5.8903,0];
 
 [E1,Ev1,S,Sv,A1,Av1]= earsunsat(xe,ve,xs,vs,xa,va);
 
 
 
 
-pha=2448;
+pha=5982;
  
 
 xa=[A1(pha,1)*cos(2*pi/3)-A1(pha,2)*sin(2*pi/3),A1(pha,2)*cos(2*pi/3)+A1(pha,1)*sin(2*pi/3),A1(pha,3)];
@@ -35,14 +33,13 @@ va=[Av1(pha,1)*cos(2*pi/3)-Av1(pha,2)*sin(2*pi/3),Av1(pha,2)*cos(2*pi/3)+Av1(pha
 
 
 
-pha=1219;
+pha=2991;
 
 xa=[A1(pha,1)*cos(4*pi/3)-A1(pha,2)*sin(4*pi/3),A1(pha,2)*cos(4*pi/3)+A1(pha,1)*sin(4*pi/3),A1(pha,3)];
 va=[Av1(pha,1)*cos(4*pi/3)-Av1(pha,2)*sin(4*pi/3),Av1(pha,2)*cos(4*pi/3)+Av1(pha,1)*sin(4*pi/3),Av1(pha,3)];
 
 
 [E3,Ev3,S,Sv,A3,Av3]= earsunsat(xe,ve,xs,vs,xa,va);
-
 
 %{
 
@@ -71,9 +68,8 @@ for i=1:10:size(E1,1)
 
 end
 
+%encheck3bd(E1,Ev1,S,Sv,A1,Av1)
 %}
-encheck3bd(E1,Ev1,S,Sv,A1,Av1)
-
 ditances(A1,A2,A3)
 
   
