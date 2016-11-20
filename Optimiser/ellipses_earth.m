@@ -21,7 +21,7 @@ va=[2.0363,5.8903,0];
 
 
 
-pha=5982;
+pha=358878;
  
 
 xa=[A1(pha,1)*cos(2*pi/3)-A1(pha,2)*sin(2*pi/3),A1(pha,2)*cos(2*pi/3)+A1(pha,1)*sin(2*pi/3),A1(pha,3)];
@@ -33,7 +33,7 @@ va=[Av1(pha,1)*cos(2*pi/3)-Av1(pha,2)*sin(2*pi/3),Av1(pha,2)*cos(2*pi/3)+Av1(pha
 
 
 
-pha=2991;
+pha=179397;
 
 xa=[A1(pha,1)*cos(4*pi/3)-A1(pha,2)*sin(4*pi/3),A1(pha,2)*cos(4*pi/3)+A1(pha,1)*sin(4*pi/3),A1(pha,3)];
 va=[Av1(pha,1)*cos(4*pi/3)-Av1(pha,2)*sin(4*pi/3),Av1(pha,2)*cos(4*pi/3)+Av1(pha,1)*sin(4*pi/3),Av1(pha,3)];

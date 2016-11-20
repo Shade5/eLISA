@@ -1,6 +1,6 @@
 function [E,Ev,S,Sv,A,Av] = earsunsat(xe,ve,xs,vs,xa,va)
 
-    timerange=0:1/(365*24):1.1;     %timerange=0:1/3651:6;
+    timerange=0:1/(365*24*60):1.1;     %timerange=0:1/3651:6;
     
     initial=[xe(1),xe(2),xe(3),...
              ve(1),ve(2),ve(3),...
